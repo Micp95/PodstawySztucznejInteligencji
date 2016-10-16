@@ -64,7 +64,6 @@ namespace ArtificialIntelligence.Exemples
                     return networkAND.AksNetwork(inputList);
                 case gateValue.OR:
                     return networkOR.AksNetwork(inputList);
-                    break;
                 case gateValue.NOT:
                     return networkNOT.AksNetwork(inputList);
             }
