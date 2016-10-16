@@ -6,50 +6,61 @@ using System.Threading.Tasks;
 
 namespace ArtificialIntelligence.NeuralNetwork
 {
-    class Adaline
+    class AdalineMPL
     {
-        List<Adaline> inputs = new List<Adaline>();
-        public double z;
+        List<AdalineMPL> inputs = new List<AdalineMPL>();
 
         List<double> weights = new List<double>();
         private double b;
 
         public double output { get; set; }
-       // double deltaError;
+        public double deltaError { get; set; }
 
         private double lernValue { get; set; }
 
-        public Adaline(double lernValue, List<Adaline> inputs)
+        public AdalineMPL(double lernValue, List<AdalineMPL> inputs)
         {
             this.inputs = inputs;
             this.lernValue = lernValue;
-            z = double.NaN;
             if( inputs != null)
                 InitializeWeights();
         }
 
         public void Ask()
         {
+            deltaError = 0;
             double s = b;
+          //  double s = 0;
             for (int k = 0; k < inputs.Count; k++)
                 s += weights[k] * inputs[k].output;
 
 
             output = function(s);
-
-            if (!double.IsNaN(z))
-            {
-                errorFunction();
-                z = double.NaN;
-            }
         }
+        public void Lern()
+        {
+            //send error to prev layer
+            for (int k = 0; k < inputs.Count; k++)
+            {
+                inputs[k].deltaError += deltaError * weights[k];
+            }
+
+            errorFunction();
+        }
+
+        public void LernInitialization(double z)
+        {
+            deltaError = z - output;
+            Lern();
+        }
+
 
         void errorFunction()
         {
-            double delta = z - output;
+     //       double delta = z - output;
             for (int k = 0; k < inputs.Count; k++)
-                weights[k] = weights[k] + (lernValue*delta* dFunction (output)* inputs[k].output);
-            b = b + lernValue * dFunction(output) * delta;
+                weights[k] = weights[k] + (lernValue* deltaError * dFunction (output)* inputs[k].output);
+            b = b + lernValue * dFunction(output) * deltaError;
         }
 
         double alpha = 0.6;

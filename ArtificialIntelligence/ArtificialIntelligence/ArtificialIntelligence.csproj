@@ -58,15 +58,24 @@
     <Compile Include="Ex2.Designer.cs">
       <DependentUpon>Ex2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ex21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex21.Designer.cs">
+      <DependentUpon>Ex21.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exemples\AdalineLogicGate.cs" />
     <Compile Include="Exemples\LogicGate.cs" />
+    <Compile Include="Exemples\LogicGatesMPL.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="NeuralNetwork\AdalineMPL.cs" />
     <Compile Include="NeuralNetwork\Adaline.cs" />
+    <Compile Include="NeuralNetwork\AdalineMPLNetworkController.cs" />
     <Compile Include="NeuralNetwork\AdalineNetworkController.cs" />
     <Compile Include="NeuralNetwork\NetworkController.cs" />
     <Compile Include="NeuralNetwork\Neuron.cs" />
@@ -78,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ex2.resx">
       <DependentUpon>Ex2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ex21.resx">
+      <DependentUpon>Ex21.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtificialIntelligence.NeuralNetwork
 {
-    class Perceptron
+    class Perceptron : Neuron
     {
         private Dictionary<Perceptron, double> weights = new Dictionary<Perceptron, double>();
         List<Perceptron> keys = new List<Perceptron>();
