@@ -102,7 +102,7 @@ namespace ArtificialIntelligence
 
         private void button5_Click(object sender, EventArgs e)
         {
-            labelOut.Text = network.lern(selGate, int.Parse(textBox5.Text));
+            labelOut.Text = network.lern(selGate, int.Parse(textBox5.Text), double.Parse(textBox2.Text));
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -136,6 +136,11 @@ namespace ArtificialIntelligence
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
             network.initializeNetworks(LogicGatesMPL.gateValue.XOR, double.Parse(textBox1.Text), int.Parse(textBox9.Text));
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            labelOut.Text = network.getActualErrorForTest(selGate) + "%";
         }
     }
 }

@@ -9,9 +9,9 @@ namespace ArtificialIntelligence.NeuralNetwork
     class AdalineMPL
     {
         List<AdalineMPL> inputs = new List<AdalineMPL>();
-
         List<double> weights = new List<double>();
         private double b;
+
 
         public double output { get; set; }
         public double deltaError { get; set; }
@@ -84,5 +84,9 @@ namespace ArtificialIntelligence.NeuralNetwork
             b = rand.NextDouble();
         }
 
+        public double getError()
+        {
+            return deltaError;
+        }
     }
 }

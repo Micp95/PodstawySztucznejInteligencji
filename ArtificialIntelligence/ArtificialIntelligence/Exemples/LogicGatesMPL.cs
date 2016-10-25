@@ -62,7 +62,7 @@ namespace ArtificialIntelligence.Exemples
 
         }
 
-        public string lern(gateValue net,int iterations)
+        public string lern(gateValue net,int iterations, double error)
         {
             AdalineMPLNetworkController network = getNetwork(net);
             List<TestData> lernData = getTestData(net);
@@ -72,7 +72,8 @@ namespace ArtificialIntelligence.Exemples
             {
                 foreach ( TestData actData in lernData)
                 {
-                    network.lern(actData.x, actData.res);
+                    network.lernArr(actData.x, actData.res, error);
+                    //network.lern(actData.x, actData.res);
                 }
                 iterations--;
             }
@@ -111,6 +112,13 @@ namespace ArtificialIntelligence.Exemples
             else
                 return false;
         }
+        
+        double getActallError(double x,double y) {
+            double res = y - x;
+            if (res < 0)
+                res = -res;
+            return res;
+        }
 
         public double ask(gateValue net, double[] input)
         {
@@ -132,6 +140,19 @@ namespace ArtificialIntelligence.Exemples
             }
             return (correct / (double)(lernData.Count));
 
+        }
+        public double getActualErrorForTest(gateValue net)
+        {
+            AdalineMPLNetworkController network = getNetwork(net);
+            List<TestData> lernData = getTestData(net);
+
+            double acumlator = 0;
+            foreach (TestData data in lernData)
+            {
+                acumlator += getActallError(ask(net, data.x), data.res[0]);
+            }
+
+            return acumlator / (double)lernData.Count;
         }
 
         private List<TestData> getTestData(gateValue net)
