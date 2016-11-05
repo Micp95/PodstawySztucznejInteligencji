@@ -37,5 +37,12 @@ namespace ArtificialIntelligence
             window.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Ex3 window = new Ex3(this);
+            window.Show();
+            this.Hide();
+        }
     }
 }
