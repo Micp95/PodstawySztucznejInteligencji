@@ -64,13 +64,13 @@ namespace ArtificialIntelligence
             res[1] = double.Parse(textBox17.Text);
             res[2] = double.Parse(textBox16.Text);
 
-            res[3] = double.Parse(textBox12.Text);
-            res[4] = double.Parse(textBox13.Text);
-            res[5] = double.Parse(textBox14.Text);
+            res[3] = double.Parse(textBox15.Text);
+            res[4] = double.Parse(textBox14.Text);
+            res[5] = double.Parse(textBox13.Text);
 
-            res[6] = double.Parse(textBox15.Text);
-            res[7] = double.Parse(textBox16.Text);
-            res[8] = double.Parse(textBox17.Text);
+            res[6] = double.Parse(textBox12.Text);
+            res[7] = double.Parse(textBox11.Text);
+            res[8] = double.Parse(textBox10.Text);
 
             return res;
         }

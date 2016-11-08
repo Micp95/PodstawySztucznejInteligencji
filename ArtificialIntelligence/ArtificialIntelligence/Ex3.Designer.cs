@@ -53,11 +53,12 @@
             this.labelSelect = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
-            this.labelGeneral = new System.Windows.Forms.Label();
+            this.labelGeneral2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.labelGeneral = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -270,13 +271,13 @@
             this.textBox19.TabIndex = 25;
             this.textBox19.Text = "1";
             // 
-            // labelGeneral
+            // labelGeneral2
             // 
-            this.labelGeneral.AutoSize = true;
-            this.labelGeneral.Location = new System.Drawing.Point(176, 184);
-            this.labelGeneral.Name = "labelGeneral";
-            this.labelGeneral.Size = new System.Drawing.Size(0, 13);
-            this.labelGeneral.TabIndex = 26;
+            this.labelGeneral2.AutoSize = true;
+            this.labelGeneral2.Location = new System.Drawing.Point(176, 184);
+            this.labelGeneral2.Name = "labelGeneral2";
+            this.labelGeneral2.Size = new System.Drawing.Size(0, 13);
+            this.labelGeneral2.TabIndex = 26;
             // 
             // button5
             // 
@@ -315,16 +316,24 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // labelGeneral
+            // 
+            this.labelGeneral.Location = new System.Drawing.Point(168, 178);
+            this.labelGeneral.Name = "labelGeneral";
+            this.labelGeneral.Size = new System.Drawing.Size(130, 20);
+            this.labelGeneral.TabIndex = 31;
+            // 
             // Ex3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 216);
+            this.Controls.Add(this.labelGeneral);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.labelGeneral);
+            this.Controls.Add(this.labelGeneral2);
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelSelect);
@@ -386,10 +395,11 @@
         private System.Windows.Forms.Label labelSelect;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label labelGeneral;
+        private System.Windows.Forms.Label labelGeneral2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox labelGeneral;
     }
 }

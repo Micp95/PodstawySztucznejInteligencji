@@ -33,13 +33,13 @@ namespace ArtificialIntelligence.NeuralNetwork
             for (int k = 0; k < inputs.Count; k++)
                 s += weights[k] * inputs[k].output;
 
-            output = function(s);
+            //output = function(s);
             output = s;
         }
 
         public void Lern()
         {
-            Ask();
+         //   Ask();
             for (int k = 0; k < weights.Count; k++)
                 weights[k] += lernValue * output * inputs[k].output;
 
@@ -48,7 +48,7 @@ namespace ArtificialIntelligence.NeuralNetwork
 
         public void Lern(double d)
         {
-            Ask();
+        //    Ask();
             for (int k = 0; k < weights.Count; k++)
                 weights[k] += lernValue * d * inputs[k].output;
 
