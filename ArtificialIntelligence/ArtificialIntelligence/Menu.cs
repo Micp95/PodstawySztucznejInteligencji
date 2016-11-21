@@ -44,5 +44,12 @@ namespace ArtificialIntelligence
             window.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Ex4 window = new Ex4(this);
+            window.Show();
+            this.Hide();
+        }
     }
 }
