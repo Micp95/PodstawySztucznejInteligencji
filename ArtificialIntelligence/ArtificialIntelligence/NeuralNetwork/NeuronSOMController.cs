@@ -105,9 +105,9 @@ namespace ArtificialIntelligence.NeuralNetwork
                         switch (myMode)
                         {
                             case selectMethod.Gauss:
-                                widthSq = neighbourhoodRadius * neighbourhoodRadius;
                                 if (distance < neighbourhoodRadius)
                                 {
+                                    widthSq = neighbourhoodRadius * neighbourhoodRadius;
                                     influence = Math.Exp(-(distance * distance) / (2 * widthSq));
                                     neuron.setWeights(learningRate, influence);
                                 }
@@ -148,7 +148,7 @@ namespace ArtificialIntelligence.NeuralNetwork
                 tmp = neurons[k].getDistance();
                 if(tmp < winVar)
                 {
-                    winVar = tmp;
+                        winVar = tmp;
                     winner = k;
                 }
             }
