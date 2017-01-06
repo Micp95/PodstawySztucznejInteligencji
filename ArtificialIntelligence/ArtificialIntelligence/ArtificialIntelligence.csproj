@@ -76,7 +76,14 @@
     <Compile Include="Ex4.Designer.cs">
       <DependentUpon>Ex4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ex5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex5.Designer.cs">
+      <DependentUpon>Ex5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exemples\AdalineLogicGate.cs" />
+    <Compile Include="Exemples\HopfieldLernMap.cs" />
     <Compile Include="Exemples\LogicGate.cs" />
     <Compile Include="Exemples\LogicGatesMPL.cs" />
     <Compile Include="Exemples\NeuralHebaExample.cs" />
@@ -95,6 +102,8 @@
     <Compile Include="NeuralNetwork\Neuron.cs" />
     <Compile Include="NeuralNetwork\NeuronHebba.cs" />
     <Compile Include="NeuralNetwork\NeuronHebbaController.cs" />
+    <Compile Include="NeuralNetwork\NeuronHopfield.cs" />
+    <Compile Include="NeuralNetwork\NeuronHopfieldController.cs" />
     <Compile Include="NeuralNetwork\NeuronSOM.cs" />
     <Compile Include="NeuralNetwork\NeuronSOMConfig.cs" />
     <Compile Include="NeuralNetwork\NeuronSOMController.cs" />
@@ -115,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ex4.resx">
       <DependentUpon>Ex4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ex5.resx">
+      <DependentUpon>Ex5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

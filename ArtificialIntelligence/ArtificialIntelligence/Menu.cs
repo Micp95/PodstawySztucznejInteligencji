@@ -51,5 +51,12 @@ namespace ArtificialIntelligence
             window.Show();
             this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Ex5 window = new Ex5(this);
+            window.Show();
+            this.Hide();
+        }
     }
 }
