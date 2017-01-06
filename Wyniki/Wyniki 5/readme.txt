@@ -1,0 +1,3 @@
+Do æwiczenia zosta³ stworzony program z wykorzystaniem Windows Forms (01.png). Do sieci trafi³y trzy schematy (d1.png,d2.png,d3.png). Sieæ zosta³a nauczona schematów za pomoc¹ regu³y Hebb'a. Nastêpnie odpytano sieæ dla nauczonego schematu, czym sieæ odpowiedzia³a nie zmodyfikowanym schematem.
+
+Kolejna prób¹ by³o przes³anie zmodyfikowanego schematu (02.png), który zosta³ wys³any do sieci. Sieæ odtworzy³a schemat wed³ug schematu, który wczeœniej zapamiêta³a. W czego konsekwencji otrzymaliœmy nauczony wczeœniej schemat (03.png).
